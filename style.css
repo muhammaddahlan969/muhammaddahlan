@@ -1,0 +1,292 @@
+/* style.css */
+
+/* 1. Reset Dasar & Font */
+body {
+    font-family: 'Poppins', sans-serif; 
+    line-height: 1.6;
+    color: #444;
+    background-color: #f7f9fc;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.5s;
+}
+.container {
+    width: 85%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* 2. Header & Navigasi */
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex; 
+    align-items: center;
+}
+header h1 {
+    font-size: 1.8em;
+    margin: 0;
+}
+header nav {
+    margin-left: auto; 
+}
+#main-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+#main-nav li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+#main-nav li a:hover {
+    background-color: #0056b3;
+}
+
+/* 3. Hero Section (Awal) */
+.hero-section {
+    background: linear-gradient(135deg, #007bff 0%, #0056b3 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    overflow: hidden; 
+}
+.profile-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 6px solid white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    animation: fadeInScale 1s ease-out;
+}
+/* Animasi masuk */
+@keyframes fadeInScale {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+.hero-content h2, .hero-content p {
+    animation: fadeInUp 1s ease-out 0.5s forwards;
+    opacity: 0;
+}
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 4. Section Umum */
+section {
+    padding: 50px 0;
+}
+.colored-section {
+    background-color: #e9ecef;
+}
+h2 {
+    font-size: 1.8em;
+    color: #007bff;
+    border-left: 5px solid #007bff;
+    padding-left: 15px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+.icon {
+    margin-right: 8px;
+}
+
+/* 5. Keahlian List & Tooltip */
+.keahlian-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    gap: 12px;
+}
+.keahlian-list li {
+    background-color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.3s;
+    font-weight: 500;
+}
+.keahlian-list li:hover {
+    background-color: #d1e7ff; 
+    transform: translateY(-2px);
+}
+.skill-tooltip {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #fff3cd; 
+    color: #856404;
+    border: 1px solid #ffeeba;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+    opacity: 0.9;
+}
+
+
+/* 6. Item Proyek/Pendidikan */
+.project-item, .pendidikan-item {
+    background-color: white;
+    border-radius: 8px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08); 
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-left: 6px solid #28a745; /* Garis hijau untuk penekanan */
+}
+.project-item:hover, .pendidikan-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.project-item h3, .pendidikan-item h3 {
+    color: #28a745;
+    margin-top: 0;
+    border-bottom: 1px dashed #ccc;
+    padding-bottom: 5px;
+}
+
+/* 7. Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+}
+
+/* 8. Roadmap Section Styling */
+.roadmap-container {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    overflow-x: auto; 
+}
+
+.roadmap-item {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    min-width: 300px;
+    flex: 1;
+    border-top: 5px solid #ccc;
+    transition: all 0.3s ease;
+}
+
+.roadmap-item h3 {
+    margin-top: 0;
+    color: #007bff;
+    border-bottom: 1px dotted #ccc;
+    padding-bottom: 10px;
+}
+
+.roadmap-item ul {
+    list-style: disc;
+    padding-left: 20px;
+    font-size: 0.95em;
+}
+
+.status {
+    font-style: italic;
+    font-size: 0.9em;
+    margin-bottom: 15px;
+    color: #666;
+}
+
+/* Penanda Status/Warna Roadmap */
+.roadmap-item.current {
+    border-top-color: #ffc107; /* Kuning - Saat Ini/Dasar */
+    transform: scale(1.03); 
+}
+
+.roadmap-item.next {
+    border-top-color: #28a745; /* Hijau - Selanjutnya/Spesialisasi */
+}
+
+.roadmap-item.future {
+    border-top-color: #17a2b8; /* Biru Muda - Masa Depan/Profesional */
+}
+
+
+/* --- RESPONSIVE DESIGN (MEDIA QUERIES) --- */
+
+/* Tablet & Mobile (Max Width 768px) */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; 
+    }
+    
+    /* Header & Navigasi */
+    header {
+        flex-direction: column; 
+        text-align: center;
+    }
+    header nav {
+        margin-top: 10px;
+        margin-left: 0;
+        width: 100%;
+        padding-bottom: 5px;
+    }
+    #main-nav {
+        justify-content: space-around; 
+    }
+    #main-nav li a {
+        padding: 5px 10px;
+        font-size: 0.9em;
+    }
+    
+    /* Keahlian List */
+    .keahlian-list {
+        gap: 8px;
+        justify-content: center; 
+    }
+    .keahlian-list li {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+
+    /* Roadmap Item */
+     .roadmap-container {
+        flex-direction: row; /* Pertahankan horizontal scroll di mobile */
+    }
+    .roadmap-item {
+        min-width: 90%; /* Item mengambil 90% lebar layar agar muat di mobile */
+    }
+}
+
+/* Small Mobile (Max Width 480px) */
+@media (max-width: 480px) {
+    /* Header & Navigasi */
+    #main-nav {
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+    #main-nav li {
+        margin: 5px;
+    }
+
+    /* Hero */
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    /* Footer */
+    footer {
+        padding: 15px 0;
+    }
+}
